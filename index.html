@@ -90,7 +90,36 @@
 
   <script>
     const noBtn = document.getElementById("no");
+    const noBtn = document.getElementById("no");
 
+noBtn.addEventListener("mouseover", () => {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 50);
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+});
+function yesClicked() {
+  document.getElementById("bgMusic").play();
+
+  document.body.innerHTML = `
+    <div style="
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      font-family:'Comic Sans MS', cursive;
+      background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+      text-align:center;
+      padding:20px;
+    ">
+      <h1>
+        YAYYY 💘💘💘<br><br>
+        Mulweli & Masilo 🥰<br>
+        Best Valentine ever ❤️
+      </h1>
+    </div>
+  `;
+}
     noBtn.addEventListener("mouseover", () => {
       const x = Math.random() * (window.innerWidth - 100);
       const y = Math.random() * (window.innerHeight - 50);
@@ -136,6 +165,24 @@ function moveNo() {
   btn.style.left = Math.random() * 80 + "%";
   btn.style.top = Math.random() * 80 + "%";
 }
+</script>
+  <audio id="bgMusic" loop>
+  <source src="TEEKS_-_Through_it_All__Visualizer_(256k).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.body.addEventListener("click", () => {
+    document.getElementById("bgMusic").play();
+  }, { once: true });
+</script>
+  <audio id="bgMusic" loop>
+  <source src="TEEKS_-_Through_it_All__Visualizer_(256k).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.body.addEventListener("click", () => {
+    document.getElementById("bgMusic").play();
+  }, { once: true });
 </script>
 </body>
 </html>
