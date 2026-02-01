@@ -85,7 +85,7 @@
     <h1>Mulweli 💕</h1>
     <p>From Masilo — will you be my Valentine?</p>
     <button id="yes" onclick="yesClicked()">Yes 💖</button>
-    <button id="no">No 🙈</button>
+    <button id="no" onmouseover="moveNo()">No 💔</button>
   </div>
 
   <script>
@@ -129,6 +129,13 @@
       setTimeout(() => heart.remove(), 6000);
     }, 300);
   </script>
-
+<script>
+function moveNo() {
+  const btn = document.getElementById("no");
+  btn.style.position = "absolute";
+  btn.style.left = Math.random() * 80 + "%";
+  btn.style.top = Math.random() * 80 + "%";
+}
+</script>
 </body>
 </html>
